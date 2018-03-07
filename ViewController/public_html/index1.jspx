@@ -5,7 +5,8 @@
     <f:view>
         <af:document title="index1.jspx" id="d1">
             <af:form id="f1">
-                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ot1"/>
+                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ot1" partialTriggers="b1"/>
+                <af:button text="Refrescar" id="b1"/>
                 <af:panelGroupLayout id="pgl1"/>
             </af:form>
         </af:document>

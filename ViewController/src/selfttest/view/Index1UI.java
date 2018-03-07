@@ -3,12 +3,13 @@ package selfttest.view;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.faces.event.ActionEvent;
+
 import selfttest.model.Empleado;
 
 public class Index1UI {
 
     private List<Empleado> listaemp1;
-    private int listasize;
 
     public Index1UI() {
         super();
@@ -25,10 +26,6 @@ public class Index1UI {
         return listaemp1;
     }
 
-
-    public void setListasize(int listasize) {
-        this.listasize = listasize;
-    }
 
     public int getListasize() {
         
