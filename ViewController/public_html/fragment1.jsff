@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich"
+          xmlns:f="http://java.sun.com/jsf/core">
+    <af:panelGroupLayout id="pgl1">
+        <af:button text="Fill table" id="b1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
+                   actionListener="#{pageFlowScope.fragment1Bean.fillEmplos}"/>
+        <af:inputText label="Enter ID here" autoSubmit="true" id="it1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"/>
+        <af:button text="Delete by ID" id="b2" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"/>
+        <af:table value="#{pageFlowScope.fragment1Bean.listaempfrag}" var="row" rowBandingInterval="0" id="t1"
+                  partialTriggers="::b1 ::b2 b3">
+            <af:column sortable="false" headerText="ID" id="c1">
+                <af:outputText value="#{row.id}" id="ot1"/>
+            </af:column>
+            <af:column sortable="false" headerText="NOMBRE" id="c2">
+                <af:outputText value="#{row.nombre}" id="ot2"/>
+            </af:column>
+            <af:column sortable="false" headerText="EDAD" id="c3">
+                <af:outputText value="#{row.edad}" id="ot3"/>
+            </af:column>
+            <af:column sortable="false" headerText="FECHA" id="c4">
+                <af:outputText value="#{row.fecharegistro}" id="ot4"/>
+            </af:column>
+            <af:column sortable="false" headerText="DELETE" id="c5"
+                       visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
+                <af:button text="Delete" id="b3">
+                    <f:attribute name="emplo" value="#{row}"/>
+                </af:button>
+            </af:column>
+            <af:column sortable="false" headerText="POPUP1" id="c6"
+                       visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
+                <af:button text="Pop1" id="b4"/>
+            </af:column>
+            <af:column sortable="false" headerText="POPUP2" id="c7"
+                       visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
+                <af:button text="Pop2" id="b5"/>
+            </af:column>
+        </af:table>
+    </af:panelGroupLayout>
+</jsp:root>

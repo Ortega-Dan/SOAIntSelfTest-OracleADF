@@ -5,9 +5,15 @@
     <f:view>
         <af:document title="index1.jspx" id="d1">
             <af:form id="f1">
-                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ot1" partialTriggers="b1"/>
+                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ot1"
+                               partialTriggers="b1"/>
                 <af:button text="Refrescar" id="b1"/>
-                <af:panelGroupLayout id="pgl1"/>
+                <af:selectBooleanCheckbox label="Show Controls" autoSubmit="true"
+                                          value="#{pageFlowScope.Index1Bean.primcontainer.showcontrols}" id="sbc1"/>
+                <af:outputText value="** FIN DE LA PAGINA E INICIO DEL FRAGMENTO **" id="ot2" inlineStyle="color: Red;"/>
+                <af:panelGroupLayout id="pgl1" partialTriggers="sbc1">
+                    <af:region value="#{bindings.fragmentsflow1.regionModel}" id="r1"/>
+                </af:panelGroupLayout>
             </af:form>
         </af:document>
     </f:view>
