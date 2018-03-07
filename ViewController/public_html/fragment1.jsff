@@ -4,8 +4,9 @@
     <af:panelGroupLayout id="pgl1">
         <af:button text="Fill table" id="b1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
                    actionListener="#{pageFlowScope.fragment1Bean.fillEmplos}"/>
-        <af:inputText label="Enter ID here" autoSubmit="true" id="it1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"/>
-        <af:button text="Delete by ID" id="b2" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"/>
+        <af:inputText label="Enter ID here" autoSubmit="true" id="it1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}" value="#{pageFlowScope.fragment1Bean.currentemploid}"/>
+        <af:button text="Delete by ID" id="b2" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
+                   actionListener="#{pageFlowScope.fragment1Bean.deleteById}"/>
         <af:table value="#{pageFlowScope.fragment1Bean.listaempfrag}" var="row" rowBandingInterval="0" id="t1"
                   partialTriggers="::b1 ::b2 b3">
             <af:column sortable="false" headerText="ID" id="c1">
@@ -22,7 +23,7 @@
             </af:column>
             <af:column sortable="false" headerText="DELETE" id="c5"
                        visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
-                <af:button text="Delete" id="b3">
+                <af:button text="Delete" id="b3" actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
                     <f:attribute name="emplo" value="#{row}"/>
                 </af:button>
             </af:column>
