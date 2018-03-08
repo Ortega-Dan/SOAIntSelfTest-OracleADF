@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://localhost:8088/consultarClientes?WSDL#%7Bhttp%3A%2F%2Fwww.soaint.com%2FInformacionCliente%2F%7DServicioInformacionCliente"
+          uri="../com/soaint/informacioncliente/ServicioInformacionCliente.wsdl"/>
+</catalog>

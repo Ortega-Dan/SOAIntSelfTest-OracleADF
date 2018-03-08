@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle-webservice-clients xmlns:ns0="http://java.sun.com/xml/ns/javaee">
+   <webservice-client>
+      <service-qname namespaceURI="http://www.soaint.com/InformacionCliente/" localpart="ServicioInformacionCliente"/>
+      <port-info>
+         <wsdl-port namespaceURI="http://www.soaint.com/InformacionCliente/" localpart="InformacionCliente"/>
+         <runtime/>
+         <operations>
+            <operation name="consultarClientes"/>
+            <operation name="clientePoseeMora"/>
+         </operations>
+      </port-info>
+   </webservice-client>
+</oracle-webservice-clients>

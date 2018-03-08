@@ -19,6 +19,8 @@ import oracle.adf.view.rich.event.DialogEvent;
 import selfttest.model.Empleado;
 import selfttest.model.PrimitiveContainer;
 
+import selfttest.service.SOAPFacade;
+
 public class Fragment1_1UI {
 
     private List<Empleado> listaempfrag;
@@ -56,11 +58,12 @@ public class Fragment1_1UI {
 
         this.listaempfrag.clear();
 
+        SOAPFacade.fillEmplos(this.listaempfrag);
 
-        this.listaempfrag.add(new Empleado(432, "DanchoMan", 54, new Date()));
-        this.listaempfrag.add(new Empleado(65, "JennyWoman", 34, new Date()));
-        this.listaempfrag.add(new Empleado(7, "AmieBabie", 12, new Date()));
-        this.listaempfrag.add(new Empleado(876, "AaronBoy", 9, new Date()));
+//        this.listaempfrag.add(new Empleado(432, "DanchoMan", 54, new Date()));
+//        this.listaempfrag.add(new Empleado(65, "JennyWoman", 34, new Date()));
+//        this.listaempfrag.add(new Empleado(7, "AmieBabie", 12, new Date()));
+//        this.listaempfrag.add(new Empleado(876, "AaronBoy", 9, new Date()));
 
     }
 

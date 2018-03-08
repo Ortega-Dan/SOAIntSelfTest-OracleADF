@@ -81,6 +81,13 @@
             </hash>
             <value n="recognizerId" v="oracle.jdeveloper.library"/>
          </hash>
+         <hash>
+            <hash n="dependable">
+               <url n="sourceOwnerURL" path="../SelfTest.jws"/>
+               <url n="sourceURL" path="../WebService/WebService.jpr"/>
+            </hash>
+            <value n="recognizerId" v="oracle.jdeveloper.library"/>
+         </hash>
       </list>
    </hash>
    <hash n="oracle.ide.model.TechnologyScopeConfiguration">
