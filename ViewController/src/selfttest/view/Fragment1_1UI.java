@@ -9,7 +9,10 @@ import java.util.List;
 
 import javax.faces.event.ActionEvent;
 
+import oracle.adf.view.rich.event.DialogEvent.Outcome;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
+
+import oracle.adf.view.rich.event.DialogEvent;
 
 import selfttest.model.Empleado;
 import selfttest.model.PrimitiveContainer;
@@ -19,6 +22,7 @@ public class Fragment1_1UI {
     private List<Empleado> listaempfrag;
     private PrimitiveContainer contenfrag;
     private int currentemploid;
+    private Empleado currentselectedemplo;
 
     public Fragment1_1UI() {
         super();
@@ -68,6 +72,15 @@ public class Fragment1_1UI {
     }
 
 
+    public void setCurrentselectedemplo(Empleado currentselectedemplo) {
+        this.currentselectedemplo = currentselectedemplo;
+    }
+
+    public Empleado getCurrentselectedemplo() {
+        return currentselectedemplo;
+    }
+
+
     public void deleteById(ActionEvent actionEvent) {
 
         Iterator ite = this.listaempfrag.iterator();
@@ -97,6 +110,17 @@ public class Fragment1_1UI {
         JSFUtil.refreshComponent(JSFUtil.findComponentInRoot("ottorefresh1"));
         
         ADFUtil.dispararContextualEvent("onUpdateRunBinding", emplodel);
+        
+    }
+
+    public void dialogoCerrado(DialogEvent dialogEvent) {
+        Outcome out = dialogEvent.getOutcome();
+        
+        if(out.equals(Outcome.yes)){
+            JSFUtil.addErrorMessage("YEAP WAS CLICKED !!");
+        } else {
+            JSFUtil.addInfoMessage("nope was clicked!");
+        }
         
     }
 }

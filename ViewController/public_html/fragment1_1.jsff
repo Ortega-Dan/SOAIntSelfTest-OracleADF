@@ -4,8 +4,10 @@
     <af:panelGroupLayout id="pgl1">
         <af:button text="Fill table" id="b1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
                    actionListener="#{pageFlowScope.fragment1Bean.fillEmplos}"/>
-        <af:inputText label="Enter ID here" autoSubmit="true" id="it1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}" value="#{pageFlowScope.fragment1Bean.currentemploid}"/>
-        <af:button text="Delete by ID" id="b2" visible="true"
+        <af:inputText label="Enter ID here" autoSubmit="true" id="it1"
+                      visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
+                      value="#{pageFlowScope.fragment1Bean.currentemploid}"/>
+        <af:button text="Delete by ID (Refresh 2nd TaskFlow)" id="b2" visible="true"
                    actionListener="#{pageFlowScope.fragment1Bean.deleteById}"/>
         <af:table value="#{pageFlowScope.fragment1Bean.listaempfrag}" var="row" rowBandingInterval="0" id="t1"
                   partialTriggers="::b1 ::b2 b3">
@@ -21,15 +23,18 @@
             <af:column sortable="false" headerText="FECHA" id="c4">
                 <af:outputText value="#{row.fecharegistro}" id="ot4"/>
             </af:column>
-            <af:column sortable="false" headerText="DELETE" id="c5"
-                       visible="true">
-                <af:button text="Delete" id="b3" actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
+            <af:column sortable="false" headerText="DELETE" id="c5" visible="true">
+                <af:button text="Delete (Refresh Main)" id="b3" actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
                     <f:attribute name="emplo" value="#{row}"/>
                 </af:button>
             </af:column>
             <af:column sortable="false" headerText="POPUP1" id="c6"
                        visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
-                <af:button text="Pop1" id="b4"/>
+                <af:commandButton text="Pop1" id="b4">
+                    <af:setPropertyListener from="#{row}" to="#{pageFlowScope.fragment1Bean.currentselectedemplo}"
+                                            type="action"/>
+                    <af:showPopupBehavior popupId="::p1" triggerType="click"/>
+                </af:commandButton>
             </af:column>
             <af:column sortable="false" headerText="POPUP2" id="c7"
                        visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
@@ -37,4 +42,10 @@
             </af:column>
         </af:table>
     </af:panelGroupLayout>
+    <af:popup childCreation="deferred" autoCancel="disabled" id="p1">
+        <af:dialog id="d1" type="yesNoCancel" dialogListener="#{pageFlowScope.fragment1Bean.dialogoCerrado}">
+            <f:facet name="buttonBar"/>
+            <af:outputText value="#{pageFlowScope.fragment1Bean.currentselectedemplo.nombre}" id="ot5"/>
+        </af:dialog>
+    </af:popup>
 </jsp:root>
