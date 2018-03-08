@@ -5,7 +5,7 @@
     <f:view>
         <af:document title="index1.jspx" id="d1">
             <af:form id="f1">
-                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ot1"
+                <af:outputText value="What up my size is: #{pageFlowScope.Index1Bean.listasize}" id="ottorefresh1"
                                partialTriggers="b1"/>
                 <af:button text="Refrescar" id="b1"/>
                 <af:selectBooleanCheckbox label="Show Controls" autoSubmit="true"

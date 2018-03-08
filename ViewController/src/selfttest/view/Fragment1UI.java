@@ -95,5 +95,7 @@ public class Fragment1UI {
         
         this.listaempfrag.remove(emplodel);
         
+        JSFUtil.refreshComponent(JSFUtil.findComponentInRoot("ottorefresh1"));
+        
     }
 }
