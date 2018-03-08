@@ -10,11 +10,13 @@
     <page path="/index1.jspx" usageId="selfttest_view_index1PageDef"/>
     <page path="/fragment1_1.jsff" usageId="selfttest_view_fragment1_1PageDef"/>
     <page path="/fragment2_1.jsff" usageId="selfttest_view_fragment2_1PageDef"/>
+    <page path="/index2.jspx" usageId="selfttest_view_index2PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="selfttest_view_index1PageDef" path="selfttest.view.pageDefs.index1PageDef"/>
     <page id="selfttest_view_fragment1_1PageDef" path="selfttest.view.pageDefs.fragment1_1PageDef"/>
     <page id="selfttest_view_fragment2_1PageDef" path="selfttest.view.pageDefs.fragment2_1PageDef"/>
+    <page id="selfttest_view_index2PageDef" path="selfttest.view.pageDefs.index2PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <dc id="EventHandler" path="selfttest.view.EventHandler"/>

@@ -20,6 +20,7 @@
                 <af:panelGroupLayout id="pgl2">
                     <af:region value="#{bindings.fragmentsflow21.regionModel}" id="r2"/>
                 </af:panelGroupLayout>
+                <af:button text="GoPage2" action="gotopage2" id="b2"/>
             </af:form>
         </af:document>
     </f:view>

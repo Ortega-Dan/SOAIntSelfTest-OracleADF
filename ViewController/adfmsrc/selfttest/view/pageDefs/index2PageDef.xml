@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.11.57" id="index2PageDef"
+                Package="selfttest.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <taskFlow id="fragmentsflow1" taskFlowId="/WEB-INF/fragmentsflow.xml#fragmentsflow" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="ListaEmpFragmentsFlow" value="#{pageFlowScope.Index2Bean.listapag2}"/>
+        <parameter id="PrimitiveContainerFragmentsFlow" value="#{pageFlowScope.Index2Bean.paramcontpag2}"/>
+      </parameters>
+    </taskFlow>
+  </executables>
+  <bindings/>
+</pageDefinition>

@@ -10,8 +10,39 @@
             <managed-bean-class>selfttest.view.Index1UI</managed-bean-class>
             <managed-bean-scope>pageFlow</managed-bean-scope>
         </managed-bean>
+        <managed-bean id="__6">
+            <managed-bean-name>Index2Bean</managed-bean-name>
+            <managed-bean-class>selfttest.view.Index2UI</managed-bean-class>
+            <managed-bean-scope>pageFlow</managed-bean-scope>
+        </managed-bean>
         <view id="index1">
             <page>/index1.jspx</page>
         </view>
+        <view id="index2">
+            <page>/index2.jspx</page>
+        </view>
+        <task-flow-return id="taskFlowReturn1">
+            <outcome>
+                <name>taskFlowReturn1</name>
+            </outcome>
+        </task-flow-return>
+        <control-flow-rule id="__2">
+            <from-activity-id>index1</from-activity-id>
+            <control-flow-case id="__3">
+                <from-outcome>gotopage2</from-outcome>
+                <to-activity-id>index2</to-activity-id>
+            </control-flow-case>
+        </control-flow-rule>
+        <control-flow-rule id="__4">
+            <from-activity-id>index2</from-activity-id>
+            <control-flow-case id="__5">
+                <from-outcome>done</from-outcome>
+                <to-activity-id>taskFlowReturn1</to-activity-id>
+            </control-flow-case>
+            <control-flow-case id="__7">
+                <from-outcome>gotopage1</from-outcome>
+                <to-activity-id>index1</to-activity-id>
+            </control-flow-case>
+        </control-flow-rule>
     </task-flow-definition>
 </adfc-config>
