@@ -24,7 +24,8 @@
                 <af:outputText value="#{row.fecharegistro}" id="ot4"/>
             </af:column>
             <af:column sortable="false" headerText="DELETE" id="c5" visible="true">
-                <af:button text="Delete (Refresh Main)" id="b3" actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
+                <af:button text="Delete (Refresh Main)" id="b3"
+                           actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
                     <f:attribute name="emplo" value="#{row}"/>
                 </af:button>
             </af:column>
@@ -38,7 +39,10 @@
             </af:column>
             <af:column sortable="false" headerText="POPUP2" id="c7"
                        visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
-                <af:button text="Pop2" id="b5"/>
+                <af:button text="Pop2" id="b5" actionListener="#{pageFlowScope.fragment1Bean.setEmploparaPop2}"
+                           action="showpopup" useWindow="true">
+                    <f:attribute name="emplosent" value="#{row}"/>
+                </af:button>
             </af:column>
         </af:table>
     </af:panelGroupLayout>

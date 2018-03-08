@@ -17,8 +17,37 @@
       <property
          name="y">161.89648</property>
       <property
-         name="page">/fragment1.jsff</property>
+         name="page">/fragment1_1.jsff</property>
       <property
          name="exceptionHandler">false</property>
    </View>
+   <TaskFlowCall
+      id="TaskFlowCall3">
+      <property
+         name="runAsDialog">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>popUpFlow&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
+      <property
+         name="activityId">popUpFlow</property>
+      <property
+         name="x">448.5</property>
+      <property
+         name="y">163.44824</property>
+      <property
+         name="documentReference">/WEB-INF/popUpFlow.xml</property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="taskFlowId">popUpFlow</property>
+   </TaskFlowCall>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase4"
+      from="View2"
+      to="TaskFlowCall3">
+      <property
+         name="fromOutcome">showpopup</property>
+      <property
+         name="sdm:polyPoints">R50,209.0,161.5459,407.5,163.09766,L50</property>
+   </ControlFlowCase>
 </SDM>

@@ -25,6 +25,28 @@
         <view id="fragment1">
             <page>/fragment1_1.jsff</page>
         </view>
+        <task-flow-call id="popUpFlow">
+            <task-flow-reference>
+                <document>/WEB-INF/popUpFlow.xml</document>
+                <id>popUpFlow</id>
+            </task-flow-reference>
+            <input-parameter id="__6">
+                <name>emplopop</name>
+                <value>#{pageFlowScope.fragment1Bean.currentselectedemplo}</value>
+            </input-parameter>
+            <run-as-dialog>
+                <display-type>
+                    <inline-popup/>
+                </display-type>
+            </run-as-dialog>
+        </task-flow-call>
+        <control-flow-rule id="__4">
+            <from-activity-id>fragment1</from-activity-id>
+            <control-flow-case id="__5">
+                <from-outcome>showpopup</from-outcome>
+                <to-activity-id>popUpFlow</to-activity-id>
+            </control-flow-case>
+        </control-flow-rule>
         <use-page-fragments/>
     </task-flow-definition>
 </adfc-config>

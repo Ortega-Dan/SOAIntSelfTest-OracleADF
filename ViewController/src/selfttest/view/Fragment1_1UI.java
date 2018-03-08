@@ -7,6 +7,8 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
+import java.util.Map;
+
 import javax.faces.event.ActionEvent;
 
 import oracle.adf.view.rich.event.DialogEvent.Outcome;
@@ -122,5 +124,14 @@ public class Fragment1_1UI {
             JSFUtil.addInfoMessage("nope was clicked!");
         }
         
+    }
+
+    public void setEmploparaPop2(ActionEvent actionEvent) {
+        
+        RichButton buttie = (RichButton) actionEvent.getComponent();
+        Empleado emplotosentout = (Empleado) buttie.getAttributes().get("emplosent");
+        
+        this.currentselectedemplo = emplotosentout;
+
     }
 }
