@@ -25,10 +25,10 @@ public class Fragment2_1UI {
         return contenfrag2;
     }
 
-    public void saySomething(Object carga) {
+    public void saySomething(Object objeto) {
 
-        if (carga.getClass().equals(Empleado.class)) {
-            JSFUtil.addInfoMessage("El empleado eliminado es: " + ((Empleado)carga).getNombre() + "Y mi estado booleano es: " + contenfrag2.isShowcontrols());
+        if (objeto.getClass().equals(Empleado.class)) {
+            JSFUtil.addInfoMessage("El empleado eliminado es: " + ((Empleado)objeto).getNombre() + ". Y mi estado booleano es: " + this.contenfrag2.isShowcontrols());
         }
 
     }

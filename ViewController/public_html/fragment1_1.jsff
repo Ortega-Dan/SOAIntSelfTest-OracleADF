@@ -22,7 +22,7 @@
                 <af:outputText value="#{row.fecharegistro}" id="ot4"/>
             </af:column>
             <af:column sortable="false" headerText="DELETE" id="c5"
-                       visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}">
+                       visible="true">
                 <af:button text="Delete" id="b3" actionListener="#{pageFlowScope.fragment1Bean.deleteFromRow}">
                     <f:attribute name="emplo" value="#{row}"/>
                 </af:button>

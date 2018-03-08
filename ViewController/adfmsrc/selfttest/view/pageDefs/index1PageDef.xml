@@ -19,4 +19,15 @@
     </taskFlow>
   </executables>
   <bindings/>
+  <eventMap xmlns="http://xmlns.oracle.com/adfm/contextualEvent">
+    <event name="onUpdateRun">
+      <producer region="fragmentsflow1.fragment1_1PageDef.onUpdateRunBinding">
+        <consumer region="fragmentsflow21" handler="fragment2_1PageDef.processEventYay">
+          <parameters>
+            <parameter name="carga" value="#{data.payLoad}"/>
+          </parameters>
+        </consumer>
+      </producer>
+    </event>
+  </eventMap>
 </pageDefinition>

@@ -1,5 +1,6 @@
 package selfttest.view;
 
+import com.soaint.ADFUtil;
 import com.soaint.JSFUtil;
 
 import java.util.Date;
@@ -94,7 +95,8 @@ public class Fragment1_1UI {
         this.listaempfrag.remove(emplodel);
         
         JSFUtil.refreshComponent(JSFUtil.findComponentInRoot("ottorefresh1"));
-
+        
+        ADFUtil.dispararContextualEvent("onUpdateRunBinding", emplodel);
         
     }
 }
