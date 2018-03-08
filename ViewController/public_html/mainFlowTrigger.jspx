@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:forward page="/faces/adf.task-flow?_id=indexesFlow&amp;_document=/WEB-INF/indexesFlow.xml"/>
+</jsp:root>

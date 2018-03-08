@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+    <task-flow-definition id="indexesFlow">
+        <default-activity>index1</default-activity>
+        <data-control-scope>
+            <shared/>
+        </data-control-scope>
+        <managed-bean id="__1">
+            <managed-bean-name>Index1Bean</managed-bean-name>
+            <managed-bean-class>selfttest.view.Index1UI</managed-bean-class>
+            <managed-bean-scope>pageFlow</managed-bean-scope>
+        </managed-bean>
+        <view id="index1">
+            <page>/index1.jspx</page>
+        </view>
+    </task-flow-definition>
+</adfc-config>

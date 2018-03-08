@@ -10,9 +10,15 @@
                 <af:button text="Refrescar" id="b1"/>
                 <af:selectBooleanCheckbox label="Show Controls" autoSubmit="true"
                                           value="#{pageFlowScope.Index1Bean.primcontainer.showcontrols}" id="sbc1"/>
-                <af:outputText value="** FIN DE LA PAGINA E INICIO DEL FRAGMENTO **" id="ot2" inlineStyle="color: Red;"/>
+                <af:outputText value="** FIN DE LA PAGINA E INICIO DEL FRAGMENTO **" id="ot2"
+                               inlineStyle="color: Red;"/>
                 <af:panelGroupLayout id="pgl1" partialTriggers="sbc1">
                     <af:region value="#{bindings.fragmentsflow1.regionModel}" id="r1"/>
+                    <af:outputText value="** FIN DEL PRIMER FRAGMENTO E INICIO DEL SEGUNDO **" inlineStyle="color: Red;"
+                                   id="ot3"/>
+                </af:panelGroupLayout>
+                <af:panelGroupLayout id="pgl2">
+                    <af:region value="#{bindings.fragmentsflow21.regionModel}" id="r2"/>
                 </af:panelGroupLayout>
             </af:form>
         </af:document>

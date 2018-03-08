@@ -13,13 +13,13 @@ import oracle.adf.view.rich.component.rich.nav.RichButton;
 import selfttest.model.Empleado;
 import selfttest.model.PrimitiveContainer;
 
-public class Fragment1UI {
+public class Fragment1_1UI {
 
     private List<Empleado> listaempfrag;
     private PrimitiveContainer contenfrag;
     private int currentemploid;
 
-    public Fragment1UI() {
+    public Fragment1_1UI() {
         super();
         this.listaempfrag = (List<Empleado>) JSFUtil.resolveExpression("#{pageFlowScope.ListaEmpFragmentsFlow}");
         this.contenfrag =
@@ -81,11 +81,9 @@ public class Fragment1UI {
             }
 
         }
-
-        //RichButton button = (RichButton) actionEvent.getComponent();
-        //button.
-
-
+        
+        JSFUtil.refreshComponent(JSFUtil.findComponentInRoot("aot1refreshme"));
+        
     }
 
     public void deleteFromRow(ActionEvent actionEvent) {
@@ -96,6 +94,7 @@ public class Fragment1UI {
         this.listaempfrag.remove(emplodel);
         
         JSFUtil.refreshComponent(JSFUtil.findComponentInRoot("ottorefresh1"));
+
         
     }
 }

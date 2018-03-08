@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="windows-1252" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
-  <task-flow-definition id="fragmentsflow">
-    <default-activity>fragment1</default-activity>
-    <data-control-scope>
-      <shared/>
-    </data-control-scope>
-    <input-parameter-definition id="__1">
-      <name>ListaEmpFragmentsFlow</name>
-      <value>#{pageFlowScope.ListaEmpFragmentsFlow}</value>
-      <class>java.util.List&lt;selfttest.model.Empleado&gt;</class>
-      <required/>
-    </input-parameter-definition>
-    <input-parameter-definition id="__2">
-      <name>PrimitiveContainerFragmentsFlow</name>
-      <value>#{pageFlowScope.PrimitiveContainerFragmentsFlow}</value>
-      <class>selfttest.model.PrimitiveContainer</class>
-      <required/>
-    </input-parameter-definition>
-    <managed-bean id="__3">
-      <managed-bean-name>fragment1Bean</managed-bean-name>
-      <managed-bean-class>selfttest.view.Fragment1UI</managed-bean-class>
-      <managed-bean-scope>pageFlow</managed-bean-scope>
-    </managed-bean>
-    <view id="fragment1">
-      <page>/fragment1.jsff</page>
-    </view>
-    <use-page-fragments/>
-  </task-flow-definition>
+    <task-flow-definition id="fragmentsflow">
+        <default-activity>fragment1</default-activity>
+        <data-control-scope>
+            <shared/>
+        </data-control-scope>
+        <input-parameter-definition id="__1">
+            <name>ListaEmpFragmentsFlow</name>
+            <value>#{pageFlowScope.ListaEmpFragmentsFlow}</value>
+            <class>java.util.List&lt;selfttest.model.Empleado&gt;</class>
+            <required/>
+        </input-parameter-definition>
+        <input-parameter-definition id="__2">
+            <name>PrimitiveContainerFragmentsFlow</name>
+            <value>#{pageFlowScope.PrimitiveContainerFragmentsFlow}</value>
+            <class>selfttest.model.PrimitiveContainer</class>
+            <required/>
+        </input-parameter-definition>
+        <managed-bean id="__3">
+            <managed-bean-name>fragment1Bean</managed-bean-name>
+            <managed-bean-class>selfttest.view.Fragment1_1UI</managed-bean-class>
+            <managed-bean-scope>pageFlow</managed-bean-scope>
+        </managed-bean>
+        <view id="fragment1">
+            <page>/fragment1_1.jsff</page>
+        </view>
+        <use-page-fragments/>
+    </task-flow-definition>
 </adfc-config>

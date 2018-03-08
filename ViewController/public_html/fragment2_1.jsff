@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <af:panelGroupLayout id="pgl1">
+    <af:activeOutputText value="HOLA #{pageFlowScope.Fragment2_1Bean.contenfrag2.showcontrols}" id="aot1refreshme"/>
+  </af:panelGroupLayout>
+</jsp:root>

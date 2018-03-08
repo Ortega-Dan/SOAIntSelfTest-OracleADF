@@ -11,6 +11,12 @@
         <parameter id="PrimitiveContainerFragmentsFlow" value="#{pageFlowScope.Index1Bean.primcontainer}"/>
       </parameters>
     </taskFlow>
+    <taskFlow id="fragmentsflow21" taskFlowId="/WEB-INF/fragmentsflow2.xml#fragmentsflow2" activation="deferred"
+              xmlns="http://xmlns.oracle.com/adf/controller/binding">
+      <parameters>
+        <parameter id="PrimitContFrag2" value="#{pageFlowScope.Index1Bean.primcontainer}"/>
+      </parameters>
+    </taskFlow>
   </executables>
   <bindings/>
 </pageDefinition>

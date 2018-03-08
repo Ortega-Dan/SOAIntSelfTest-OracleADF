@@ -5,7 +5,7 @@
         <af:button text="Fill table" id="b1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
                    actionListener="#{pageFlowScope.fragment1Bean.fillEmplos}"/>
         <af:inputText label="Enter ID here" autoSubmit="true" id="it1" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}" value="#{pageFlowScope.fragment1Bean.currentemploid}"/>
-        <af:button text="Delete by ID" id="b2" visible="#{pageFlowScope.fragment1Bean.contenfrag.showcontrols}"
+        <af:button text="Delete by ID" id="b2" visible="true"
                    actionListener="#{pageFlowScope.fragment1Bean.deleteById}"/>
         <af:table value="#{pageFlowScope.fragment1Bean.listaempfrag}" var="row" rowBandingInterval="0" id="t1"
                   partialTriggers="::b1 ::b2 b3">
